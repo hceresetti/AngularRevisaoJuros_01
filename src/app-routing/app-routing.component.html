@@ -1,28 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Root App</title>
+    <title>AppRoutingApp</title>
   </head>
   <body>
-    <h1>Root App</h1>
+    <h1>App Routing App</h1>
     <hello name="{{ name }}"></hello>
-
     <nav>
-      <a [routerLink]="['/']">Home</a>
-      <a [routerLink]="['/juros-simples']">Juros Simples</a>
-      <a [routerLink]="['/juros-compostos']">Juros Compostos</a>
+      <a [routerLink]="['/']">Início</a>
+      <a [routerLink]="['/interests-simple']">Simple Interests</a>
+      <a [routerLink]="['/interests-compound']">Compound Interests</a>
     </nav>
     <br />
     <router-outlet></router-outlet>
-
     <form method="POST" action="">
       <input type="radio" [(ngModel)]="opt" [value]="1" />
       <input type="radio" [(ngModel)]="opt" [value]="2" />
     </form>
-
     <h2>Option: {{ opt }}</h2>
-
     <div *ngIf="opt == '1'">Option 1</div>
     <div *ngif="opt == '2'">Option 2</div>
   </body>

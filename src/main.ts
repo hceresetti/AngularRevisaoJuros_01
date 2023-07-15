@@ -1,18 +1,17 @@
-import './polyfills';
+import 'zone.js/dist/zone';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { bootstrapApplication } from '@angular/platform-browser';
 
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './index.html',
+  styleUrls: ['./global_styles.css'],
+})
+export class App {
+  name = 'InterestsCalc';
+}
 
-import { AppModule } from './app/app.module';
-
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
-  .then((ref) => {
-    // Garante que o Angular se autodestrói em carregamentos em atividade.
-    if (window['ngRef']) {
-      window['ngRef'].destroy();
-    }
-    window['ngRef'] = ref;
-    // Caso contrário, logue o erro de inicialização
-  })
-  .catch((err) => console.error(err));
+bootstrapApplication(App);
