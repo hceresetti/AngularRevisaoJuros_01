@@ -1,14 +1,14 @@
-import { Component, VERSION, OnInit } from '@angular/core';
+import { Component, OnInit, VERSION } from '@angular/core';
 
 @Component({
   selector: 'app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  name = 'App' + VERSION.major;
-
+export class AppComponent implements OnInit {
   constructor() {}
 
-  OnInit() {}
+  ngOnInit() {}
+
+  name = 'App' + VERSION.major;
 }

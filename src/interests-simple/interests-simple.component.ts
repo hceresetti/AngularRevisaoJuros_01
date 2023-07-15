@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-interests-simple',
-  templateUrl: './app-interests-simple.component.html',
-  styleUrls: ['./app-interests-simple.component.css'],
+  templateUrl: './interests-simple.component.html',
+  styleUrls: ['./interests-simple.component.css'],
 })
 export class SimpleInterestsComponent implements OnInit {
   capital: number;
