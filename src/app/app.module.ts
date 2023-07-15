@@ -3,28 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { AppComponent } from '../app/app.component';
-import { RootComponent } from '../root/root.component';
-import { JurosSimplesComponent } from '../juros-simples/juros-simples.component';
-import { JurosCompostosComponent } from '../juros-compostos/juros-compostos.component';
-import { HelloComponent } from './hello.component';
+import { AppComponent } from './app/app.component';
+import { AppRoutingComponent } from './app-routing/app-routing.component';
+import { InterestsSimpleComponent } from './interests-simple/interests-simple.component';
+import { InterestsCompoundComponent } from './interests-compound/interests-compound.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: ' ', component: RootComponent },
-      { path: 'juros-simples', component: JurosSimplesComponent },
-      { path: 'juros-compostos', component: JurosCompostosComponent },
+      { path: '', component: AppRoutingComponent },
+      { path: 'interests-simple', component: InterestsSimpleComponent },
+      { path: 'interests-compound', component: InterestsCompoundComponent },
     ]),
-  ],
-  declarations: [
     AppComponent,
-    HelloComponent,
-    RootComponent,
-    JurosSimplesComponent,
-    JurosCompostosComponent,
+    WelcomeComponent,
+    AppRoutingComponent,
+    InterestsSimpleComponent,
+    InterestsCompoundComponent,
   ],
   bootstrap: [AppComponent],
 })

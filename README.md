@@ -1,3 +1,3 @@
 # Interests Calculator Angular Application
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/app-interests-app)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-interests-app)
